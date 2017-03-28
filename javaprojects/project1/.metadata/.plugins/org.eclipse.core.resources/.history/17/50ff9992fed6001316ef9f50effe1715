@@ -1,0 +1,20 @@
+package samples;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.*;
+
+public class FullListen extends JFrame{
+	JButton button;
+	BasicListen o = new BasicListen();
+}
+class BasicListen implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

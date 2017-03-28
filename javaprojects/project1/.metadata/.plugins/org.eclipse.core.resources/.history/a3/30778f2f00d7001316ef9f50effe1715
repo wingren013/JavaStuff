@@ -1,0 +1,26 @@
+package samples;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.*;
+
+public class FullListen extends JFrame{
+	JButton button = new JButton("PIG");
+	BasicListen listen = new BasicListen();
+	//button.addActionListener(listen);
+}
+class BasicListen implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		String action = e.getActionCommand();
+		if(action == "play"){
+			System.out.println("play in the mud");
+		}else if(action == "eat"){
+			System.out.println("eat like a pig");
+		}
+	}
+}

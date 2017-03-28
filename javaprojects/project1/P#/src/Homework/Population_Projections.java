@@ -1,0 +1,75 @@
+package Homework;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.text.*;
+
+import javax.swing.JOptionPane;
+
+public class Population_Projections {
+static int Population0=312032486;
+static double Growth_Rate=(((60.000/7.000)*60.000*24.000*365.000)+((60.000/45.000)*60.000*24.000*365.000)-(((60.000/13.000)*60.000*24.000*365.000)));
+static double Population1=312032486+Growth_Rate;
+static double Population2=Population1+Growth_Rate;
+static double Population3=Population2+Growth_Rate;
+static double Population4=Population3+Growth_Rate;
+static double Population5=Population4+Growth_Rate;
+static double Population6=Population5+Growth_Rate;
+static double Population7=Population6+Growth_Rate;
+static double Population8=Population7+Growth_Rate;
+static double Population9=Population8+Growth_Rate;
+static double Population10=Population9+Growth_Rate;
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		DecimalFormat myFormat = new DecimalFormat("####");
+		String pop1= myFormat.format(Population1);
+		String pop2 = myFormat.format(Population2);
+		String pop3 = myFormat.format(Population3);
+		String pop4 = myFormat.format(Population4);
+		String pop5 = myFormat.format(Population5);
+
+
+
+
+System.out.println("Population projection for the next five years.");
+System.out.println(Population0);
+//System.out.println(Population1);
+System.out.println(pop1);
+//System.out.println(Population2);
+System.out.println(pop2);
+//System.out.println(Population3);
+System.out.println(pop3);
+//System.out.println(Population4);
+System.out.println(pop4);
+//System.out.println(Population5);
+System.out.println(pop5);
+//known bug: sometimes a dialog box will have no dialog
+PrintStream out = new PrintStream(new FileOutputStream("population_projections.txt"));
+System.setOut(out);
+JOptionPane.showMessageDialog(null, "Population projections for the next five years.",
+		"Attention", JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(null, Population0,
+		"Current Population", JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(null, pop1,
+		"Population in one Year", JOptionPane.INFORMATION_MESSAGE);
+System.out.println(pop1);
+JOptionPane.showMessageDialog(null, pop2,
+		"Population in two years", JOptionPane.INFORMATION_MESSAGE);
+System.out.println(pop2);
+JOptionPane.showMessageDialog(null, pop3,
+		"Population in three years", JOptionPane.INFORMATION_MESSAGE);
+System.out.println(pop3);
+JOptionPane.showMessageDialog(null, pop4,
+		"Population in four years", JOptionPane.INFORMATION_MESSAGE);
+System.out.println(pop4);
+JOptionPane.showMessageDialog(null, pop5,
+		"Population in five years", JOptionPane.INFORMATION_MESSAGE);
+System.out.println(pop5);
+
+	}
+
+}
